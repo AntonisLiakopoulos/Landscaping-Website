@@ -5,6 +5,61 @@
     <title>Landscapes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Scroll event to hide overlay box
+        window.addEventListener("scroll", function () {
+            const overlay = document.querySelector(".overlay-box");
+            if (overlay) {
+                if (window.scrollY > 500) {
+                    overlay.style.opacity = "0";
+                    overlay.style.pointerEvents = "none";
+                } else {
+                    overlay.style.opacity = "1";
+                    overlay.style.pointerEvents = "auto";
+                }
+            }
+        });
+
+        // Lightbox function
+        function openLightbox(img) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        }
+
+        // ✅ Make it available to inline onclick
+        window.openLightbox = openLightbox;
+
+        // Close lightbox on clicking X
+        const closeBtn = document.querySelector(".close");
+        if (closeBtn) {
+            closeBtn.onclick = function () {
+                document.getElementById("lightbox").style.display = "none";
+            };
+        }
+
+        // Close lightbox when clicking outside the image
+        const lightbox = document.getElementById("lightbox");
+        if (lightbox) {
+            lightbox.onclick = function (e) {
+                if (e.target === this) {
+                    this.style.display = "none";
+                }
+            };
+        }
+    });
+</script>
+
+
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="">
+</div>
+<body>
     <nav class="navbar">
         <img src="logo.png" class="logo">
         <ul class="nav-menu">
@@ -20,66 +75,75 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
-</head>
-<body>
-
     <div class="hero-slider">
         <div class="overlay-box">
-            <h1 style="font-weight: 300;">Landscape Design</h1>
-            <p>Our mission is to shape meaningful and enduring landscapes<br>
-                 that embrace modern principles of sustainability and ecological balance.<br>
-                From concept development to precise design, construction, and ongoing care, <br>
-                we offer a full spectrum of services.</p>
+            <p>
+                Αποστολή μας είναι να δημιουργούμε μοναδικά και διαχρονικά τοπία που βρίσκονται σε αρμονία με τον περιβάλλοντα χώρο <br>
+                    και έχουν ως γνώμονα την μοντέρνα αισθητική, την βιωσιμότητα και την οικολογική ισορροπία.
+            </p>
+            <p>
+                Αναλαμβάνουμε όλο το φάσμα των εργασιών — από τη σύλληψη της ιδέας και τον λεπτομερή σχεδιασμό, έως την κατασκευή και τη συνεχή συντήρηση. <br>
+                Το έργο μας καλύπτει μια ευρεία ποικιλία εφαρμογών, από ξενοδοχειακά συγκροτήματα και εταιρικούς χώρους μέχρι ιδιωτικούς κήπους και βεράντες.
+
+            </p>
         </div>
-        </div>
+            
         <div class="slides">
             <img src="gallery/pool.png" alt="Garden 2">
         </div>
     </div>
-    <hr class="white-line">
 
-    <!-- Paragraph below the line -->
+
+    <hr class="white-line">
     <div class="description">
         <p>
-            We design and create unique gardens and landscapes that blend aesthetics, functionality, and nature. Whether a modern urban terrace or a lush countryside retreat, we turn your outdoor space into a living dream.
+            Our mission is to create unique and timeless landscapes that harmonize with their surroundings, guided by modern aesthetics, sustainability, and ecological balance.
+We undertake the full range of services — from concept development and detailed design to construction and ongoing maintenance.
+Our work spans a wide variety of applications, from hotel complexes and corporate spaces to private gardens and terraces.
         </p>
     </div>
+
+
     <section class="image-grid">
         <div class="grid-item">
-            <img src="img1.jpg" alt="Garden 1">
-            <p>Zen Garden with native plants</p>
+            <img src="gallery/Mesogeiakos.png" alt="Garden 1" onclick="openLightbox(this)">
+            <p>Πλαϊνη όψη ισογείου στη Βούλα με μεσογειακά φυτά.</p>
         </div>
         <div class="grid-item">
-            <img src="img2.jpg" alt="Garden 2">
-            <p>Modern terrace with succulents</p>
+            <img src="gallery/cactus.png" alt="Garden 2" onclick="openLightbox(this)">
+            <p>Απέναντι πλαϊνή όψη ισογείου με κάκτους.</p>
         </div>
         <div class="grid-item">
-            <img src="img3.jpg" alt="Garden 3">
-            <p>Olive grove with stone walls</p>
+            <img src="gallery/sterlitzias.png" alt="Garden 3" onclick="openLightbox(this)">
+            <p>Άποψη παρτεριού σε μονοκατοικία στη Βούλα.</p>
         </div>
         <div class="grid-item">
-            <img src="img4.jpg" alt="Garden 4">
-            <p>Vertical garden in small patio</p>
+            <img src="gallery/Mediterrenean.png" alt="Garden 4" onclick="openLightbox(this)">
+            <p>Βραχόκηπος με μεσογειακά φυτά στη Βουλιαγμένη.</p>
         </div>
         <div class="grid-item">
-            <img src="img5.jpg" alt="Garden 5">
-            <p>Seaside landscape with palms</p>
+            <img src="gallery/japanese_garden.png" alt="Garden 5" onclick="openLightbox(this)">
+            <p>Πρόταση για ιαπωνικό κήπο σε πολυκατοικία στη Βούλα.</p>
         </div>
         <div class="grid-item">
-            <img src="img6.jpg" alt="Garden 6">
-            <p>Balcony with flower beds</p>
+            <img src="gallery/hotel.png" alt="Garden 6" onclick="openLightbox(this)">
+            <p>Πρόταση για ξενοδοχείο στην Εύβοια.</p>
         </div>
         <div class="grid-item">
-            <img src="img7.jpg" alt="Garden 7">
-            <p>Poolside garden with bamboo</p>
+            <img src="gallery/Voula.png" alt="Garden 7" onclick="openLightbox(this)">
+            <p>Άποψη για παρτέρι μονοκατοικίας στη Βάρη.</p>
         </div>
         <div class="grid-item">
-            <img src="img8.jpg" alt="Garden 8">
-            <p>Rustic field with wild herbs</p>
+            <img src="gallery/Τζια.png" alt="Garden 8" onclick="openLightbox(this)">
+            <p>Διακόσμη σε μονοκατοικία στην Τζιά.</p>
         </div>
     </section>
-    
-
 </body>
+<footer class="footer">
+    <div class="footer-content">
+        <p><strong>Contact:</strong> greenscapessouth@.gmail.com </p>
+        <p><strong>Address:</strong> Voula, Athens, Greece</p>
+        <p>&copy; 2025 Green Scapes South. All rights reserved.</p>
+    </div>
+</footer>
 </html>
