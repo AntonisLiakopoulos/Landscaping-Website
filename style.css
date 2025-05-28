@@ -7,21 +7,21 @@ body {
 }
 
 .hero-slider {
-  width: 100%;
-  height: 500px; /* You can also use 100vh for full screen */
-  overflow: hidden;
   position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
 }
 
 .slides {
   display: flex;
-  width: 200%; /* Two slides (100% + 100%) */
+  width: 200vw; /* Two full-screen slides */
   height: 100%;
   animation: slide 10s infinite;
 }
 
 .slide {
-  width: 100vw; /* One full viewport width */
+  width: 100vw;
   height: 100%;
   flex-shrink: 0;
 }
@@ -31,7 +31,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
 
 
 @keyframes slide {
