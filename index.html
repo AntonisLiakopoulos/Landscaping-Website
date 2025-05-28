@@ -1,154 +1,141 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8" />
-    <title>Landscapes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-
-<div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-img" id="lightbox-img" src="">
-</div>
-
-        <nav class="navbar">
-        <img src="logo.png" class="logo">
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="clients.html"> Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="menu-toggle" id="menu-toggle">
-          &#9776; <!-- Unicode for hamburger icon -->
+    <head>
+        <meta charset="UTF-8" />
+        <title>Landscapes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-img" id="lightbox-img" src="">
         </div>
-
-    </nav>
-    <div class="hero-slider">
-        <div class="overlay-box">
-            <p>
-                Αποστολή μας είναι να δημιουργούμε μοναδικά και διαχρονικά τοπία που βρίσκονται σε αρμονία με τον περιβάλλοντα χώρο <br>
-                    και έχουν ως γνώμονα τη μοντέρνα αισθητική, τη βιωσιμότητα και την οικολογική ισορροπία.
-            </p>
-            <p>
-                Αναλαμβάνουμε όλο το φάσμα των εργασιών — από τη σύλληψη της ιδέας και τον λεπτομερή σχεδιασμό, έως την κατασκευή και τη συνεχή συντήρηση. <br>
-                Το έργο μας καλύπτει μια ευρεία ποικιλία εφαρμογών, από ξενοδοχειακά συγκροτήματα και εταιρικούς χώρους μέχρι ιδιωτικούς κήπους και βεράντες.
-
-            </p>
+        
+        <div class="hero-slider">
+            <div class="overlay-box">
+                <p>
+                    Αποστολή μας είναι να δημιουργούμε μοναδικά και διαχρονικά τοπία που βρίσκονται σε αρμονία με τον περιβάλλοντα χώρο <br>
+                        και έχουν ως γνώμονα τη μοντέρνα αισθητική, τη βιωσιμότητα και την οικολογική ισορροπία.
+                </p>
+                <p>
+                    Αναλαμβάνουμε όλο το φάσμα των εργασιών — από τη σύλληψη της ιδέας και τον λεπτομερή σχεδιασμό, έως την κατασκευή και τη συνεχή συντήρηση. <br>
+                    Το έργο μας καλύπτει μια ευρεία ποικιλία εφαρμογών, από ξενοδοχειακά συγκροτήματα και εταιρικούς χώρους μέχρι ιδιωτικούς κήπους και βεράντες.
+    
+                </p>
+            </div>
+                
+            <div class="slides">
+                <img src="gallery/pool.png" alt="Garden 2">
+            </div>
         </div>
+        
+        
+            <hr class="white-line">
+            <div class="description">
+                <p>
+                    Our mission is to create unique and timeless landscapes that harmonize with their surroundings, guided by modern aesthetics, sustainability, and ecological balance.
+        We undertake the full range of services — from concept development and detailed design to construction and ongoing maintenance.
+        Our work spans a wide variety of applications, from hotel complexes and corporate spaces to private gardens and terraces.
+                </p>
+            </div>
+        
+        
+            <section class="image-grid">
+                <div class="grid-item">
+                    <img src="gallery/Mesogeiakos.png" alt="Garden 1" onclick="openLightbox(this)">
+                    <p>Πλαϊνη όψη ισογείου στη Βούλα με μεσογειακά φυτά.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="gallery/cactus.png" alt="Garden 2" onclick="openLightbox(this)">
+                    <p>Απέναντι πλαϊνή όψη ισογείου με κάκτους.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="gallery/sterlitzias.png" alt="Garden 3" onclick="openLightbox(this)">
+                    <p>Πρόταση παρτεριού σε μονοκατοικία στη Βούλα.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="gallery/Mediterrenean.png" alt="Garden 4" onclick="openLightbox(this)">
+                    <p>Βραχόκηπος με μεσογειακά φυτά στη Βουλιαγμένη.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="gallery/japanese_garden.png" alt="Garden 5" onclick="openLightbox(this)">
+                    <p>Πρόταση για ιαπωνικό κήπο σε πολυκατοικία στη Βούλα.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="gallery/hotel.png" alt="Garden 6" onclick="openLightbox(this)">
+                    <p>Πρόταση για ξενοδοχείο στην Εύβοια.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="gallery/Voula.png" alt="Garden 7" onclick="openLightbox(this)">
+                    <p>Άποψη για παρτέρι μονοκατοικίας στη Βάρη.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="gallery/Τζια.png" alt="Garden 8" onclick="openLightbox(this)">
+                    <p>Διακόσμηση σε μονοκατοικία στην Τζιά.</p>
+                </div>
+            </section>
+            <footer class="footer">
+            <div class="footer-content">
+                <p><strong>Contact:</strong> greenscapessouth@gmail.com </p>
+                <p><strong>Address:</strong> Voula, Athens, Greece</p>
+                <p>&copy; 2025 Green Scapes South. All rights reserved.</p>
+            </div>
+            </footer>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    // Scroll event to hide overlay box
+                    window.addEventListener("scroll", function () {
+                        const overlay = document.querySelector(".overlay-box");
+                        if (overlay) {
+                            if (window.scrollY > 200) {
+                                overlay.style.opacity = "0";
+                                overlay.style.pointerEvents = "none";
+                            } else {
+                                overlay.style.opacity = "1";
+                                overlay.style.pointerEvents = "auto";
+                            }
+                        }
+                    });
             
-        <div class="slides">
-            <img src="gallery/pool.png" alt="Garden 2">
-        </div>
-    </div>
-
-
-    <hr class="white-line">
-    <div class="description">
-        <p>
-            Our mission is to create unique and timeless landscapes that harmonize with their surroundings, guided by modern aesthetics, sustainability, and ecological balance.
-We undertake the full range of services — from concept development and detailed design to construction and ongoing maintenance.
-Our work spans a wide variety of applications, from hotel complexes and corporate spaces to private gardens and terraces.
-        </p>
-    </div>
-
-
-    <section class="image-grid">
-        <div class="grid-item">
-            <img src="gallery/Mesogeiakos.png" alt="Garden 1" onclick="openLightbox(this)">
-            <p>Πλαϊνη όψη ισογείου στη Βούλα με μεσογειακά φυτά.</p>
-        </div>
-        <div class="grid-item">
-            <img src="gallery/cactus.png" alt="Garden 2" onclick="openLightbox(this)">
-            <p>Απέναντι πλαϊνή όψη ισογείου με κάκτους.</p>
-        </div>
-        <div class="grid-item">
-            <img src="gallery/sterlitzias.png" alt="Garden 3" onclick="openLightbox(this)">
-            <p>Πρόταση παρτεριού σε μονοκατοικία στη Βούλα.</p>
-        </div>
-        <div class="grid-item">
-            <img src="gallery/Mediterrenean.png" alt="Garden 4" onclick="openLightbox(this)">
-            <p>Βραχόκηπος με μεσογειακά φυτά στη Βουλιαγμένη.</p>
-        </div>
-        <div class="grid-item">
-            <img src="gallery/japanese_garden.png" alt="Garden 5" onclick="openLightbox(this)">
-            <p>Πρόταση για ιαπωνικό κήπο σε πολυκατοικία στη Βούλα.</p>
-        </div>
-        <div class="grid-item">
-            <img src="gallery/hotel.png" alt="Garden 6" onclick="openLightbox(this)">
-            <p>Πρόταση για ξενοδοχείο στην Εύβοια.</p>
-        </div>
-        <div class="grid-item">
-            <img src="gallery/Voula.png" alt="Garden 7" onclick="openLightbox(this)">
-            <p>Άποψη για παρτέρι μονοκατοικίας στη Βάρη.</p>
-        </div>
-        <div class="grid-item">
-            <img src="gallery/Τζια.png" alt="Garden 8" onclick="openLightbox(this)">
-            <p>Διακόσμηση σε μονοκατοικία στην Τζιά.</p>
-        </div>
-    </section>
-    <footer class="footer">
-    <div class="footer-content">
-        <p><strong>Contact:</strong> greenscapessouth@gmail.com </p>
-        <p><strong>Address:</strong> Voula, Athens, Greece</p>
-        <p>&copy; 2025 Green Scapes South. All rights reserved.</p>
-    </div>
-    </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Scroll event to hide overlay box
-            window.addEventListener("scroll", function () {
-                const overlay = document.querySelector(".overlay-box");
-                if (overlay) {
-                    if (window.scrollY > 200) {
-                        overlay.style.opacity = "0";
-                        overlay.style.pointerEvents = "none";
-                    } else {
-                        overlay.style.opacity = "1";
-                        overlay.style.pointerEvents = "auto";
+                    // Lightbox function
+                    function openLightbox(img) {
+                        const lightbox = document.getElementById("lightbox");
+                        const lightboxImg = document.getElementById("lightbox-img");
+                        lightbox.style.display = "flex";
+                        lightboxImg.src = img.src;
                     }
-                }
-            });
-    
-            // Lightbox function
-            function openLightbox(img) {
-                const lightbox = document.getElementById("lightbox");
-                const lightboxImg = document.getElementById("lightbox-img");
-                lightbox.style.display = "flex";
-                lightboxImg.src = img.src;
-            }
-    
-            // ✅ Make it available globally
-            window.openLightbox = openLightbox;
-    
-            const closeBtn = document.querySelector(".close");
-            if (closeBtn) {
-                closeBtn.onclick = function () {
-                    document.getElementById("lightbox").style.display = "none";
-                };
-            }
-    
-            const lightbox = document.getElementById("lightbox");
-            if (lightbox) {
-                lightbox.onclick = function (e) {
-                    if (e.target === this) {
-                        this.style.display = "none";
+            
+                    // ✅ Make it available globally
+                    window.openLightbox = openLightbox;
+            
+                    const closeBtn = document.querySelector(".close");
+                    if (closeBtn) {
+                        closeBtn.onclick = function () {
+                            document.getElementById("lightbox").style.display = "none";
+                        };
                     }
-                };
-            }
-    
-            // ✅ Toggle mobile menu
-            const toggle = document.getElementById('menu-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            if (toggle && navMenu) {
-                toggle.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
+            
+                    const lightbox = document.getElementById("lightbox");
+                    if (lightbox) {
+                        lightbox.onclick = function (e) {
+                            if (e.target === this) {
+                                this.style.display = "none";
+                            }
+                        };
+                    }
+            
+                    // ✅ Toggle mobile menu
+                    const toggle = document.getElementById('menu-toggle');
+                    const navMenu = document.querySelector('.nav-menu');
+                    if (toggle && navMenu) {
+                        toggle.addEventListener('click', () => {
+                            navMenu.classList.toggle('active');
+                        });
+                    }
                 });
-            }
-        });
-</script>
-</body>
+        </script>
+    </body>
 </html>
