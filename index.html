@@ -5,68 +5,16 @@
     <title>Landscapes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
 </head>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Scroll event to hide overlay box
-        window.addEventListener("scroll", function () {
-            const overlay = document.querySelector(".overlay-box");
-            if (overlay) {
-                if (window.scrollY > 500) {
-                    overlay.style.opacity = "0";
-                    overlay.style.pointerEvents = "none";
-                } else {
-                    overlay.style.opacity = "1";
-                    overlay.style.pointerEvents = "auto";
-                }
-            }
-        });
-
-        // Lightbox function
-        function openLightbox(img) {
-            const lightbox = document.getElementById("lightbox");
-            const lightboxImg = document.getElementById("lightbox-img");
-            lightbox.style.display = "flex";
-            lightboxImg.src = img.src;
-        }
-
-        // ✅ Make it available to inline onclick
-        window.openLightbox = openLightbox;
-
-        // Close lightbox on clicking X
-        const closeBtn = document.querySelector(".close");
-        if (closeBtn) {
-            closeBtn.onclick = function () {
-                document.getElementById("lightbox").style.display = "none";
-            };
-        }
-
-        // Close lightbox when clicking outside the image
-        const lightbox = document.getElementById("lightbox");
-        if (lightbox) {
-            lightbox.onclick = function (e) {
-                if (e.target === this) {
-                    this.style.display = "none";
-                }
-            };
-        }
-
-         const toggle = document.getElementById('menu-toggle');
-          const navMenu = document.querySelector('.nav-menu');
-
-      toggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    });
-</script>
+<body>
 
 
 <div id="lightbox" class="lightbox">
     <span class="close">&times;</span>
     <img class="lightbox-img" id="lightbox-img" src="">
 </div>
-<body>
-    <nav class="navbar">
+
+        <nav class="navbar">
         <img src="logo.png" class="logo">
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
@@ -148,6 +96,59 @@ Our work spans a wide variety of applications, from hotel complexes and corporat
             <p>Διακόσμη σε μονοκατοικία στην Τζιά.</p>
         </div>
     </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Scroll event to hide overlay box
+        window.addEventListener("scroll", function () {
+            const overlay = document.querySelector(".overlay-box");
+            if (overlay) {
+                if (window.scrollY > 500) {
+                    overlay.style.opacity = "0";
+                    overlay.style.pointerEvents = "none";
+                } else {
+                    overlay.style.opacity = "1";
+                    overlay.style.pointerEvents = "auto";
+                }
+            }
+        });
+
+        // Lightbox function
+        function openLightbox(img) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        }
+
+        // ✅ Make it available globally
+        window.openLightbox = openLightbox;
+
+        const closeBtn = document.querySelector(".close");
+        if (closeBtn) {
+            closeBtn.onclick = function () {
+                document.getElementById("lightbox").style.display = "none";
+            };
+        }
+
+        const lightbox = document.getElementById("lightbox");
+        if (lightbox) {
+            lightbox.onclick = function (e) {
+                if (e.target === this) {
+                    this.style.display = "none";
+                }
+            };
+        }
+
+        // ✅ Toggle mobile menu
+        const toggle = document.getElementById('menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (toggle && navMenu) {
+            toggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    });
+</script>
 </body>
 <footer class="footer">
     <div class="footer-content">
