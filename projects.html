@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Projects – Green Scapes South</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="logo.png" class="logo" alt="Logo" />
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </nav>
+
+    <div style="margin-top: 140px; text-align: center; padding: 60px 20px;">
+        <h1 style="color: #333; font-size: 2.5rem;">Projects Page</h1>
+        <p style="font-size: 1.2rem; color: #666;">This page is currently under construction.</p>
+        <p style="font-size: 1rem; color: #999;">Check back soon for updates on our latest work!</p>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Contact:</strong> greenscapessouth@gmail.com</p>
+            <p><strong>Address:</strong> Voula, Athens, Greece</p>
+            <p>&copy; 2025 Green Scapes South. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.getElementById('menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            if (toggle && navMenu) {
+                toggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
