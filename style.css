@@ -30,6 +30,13 @@ body {
   object-fit: cover;
 }
 
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  45%  { transform: translateX(0); }
+  55%  { transform: translateX(-100%); }
+  100% { transform: translateX(-100%); }
+}
+
 .overlay-box {
     position: fixed;
     top: 50%;
@@ -64,14 +71,6 @@ body {
     text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
 
-@keyframes slide {
-    0% { transform: translateX(0); }
-    33% { transform: translateX(0); }
-    38% { transform: translateX(-100%); }
-    66% { transform: translateX(-100%); }
-    71% { transform: translateX(-200%); }
-    100% { transform: translateX(-200%); }
-}
 
 .white-line {
     border: none;
