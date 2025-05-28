@@ -9,26 +9,32 @@ body {
 .hero-slider {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full screen height */
+  height: auto;              /* Let it adapt to image height */
+  max-height: 100vh;         /* Prevent it from exceeding viewport */
   overflow: hidden;
 }
 
 .slides {
   display: flex;
-  width: 200vw; /* Two full-screen slides */
-  height: 100%;
+  width: 200%;
   animation: slide 10s infinite;
 }
 
 .slide {
   width: 100vw;
-  height: 100%;
   flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide img {
-  width: 100%;
-  height: 100%;
+  width: 100vw;              /* Let the image be responsive */
+  height: auto;              /* Let height scale naturally */
+  object-fit: contain;
+  display: block;
+}
+
   object-fit: contain; 
 }
 
