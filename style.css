@@ -96,7 +96,8 @@ body {
 }
 
 .grid-item {
-    text-align: left; font-size: 10;
+    text-align: left; 
+    font-size: 10;
     
 }
 
@@ -239,9 +240,13 @@ body {
 
   .overlay-box {
     padding: 20px;
-    font-size: 1rem;
     width: 90%;
   }
+
+.overlay-box p {
+  font-size: 1rem;
+}
+
 
   .description {
     font-size: 1rem;
