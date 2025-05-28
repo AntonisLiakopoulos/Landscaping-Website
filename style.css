@@ -9,19 +9,20 @@ body {
 .hero-slider {
   position: relative;
   width: 100%;
-  height: auto;              /* Let it adapt to image height */
-  max-height: 100vh;         /* Prevent it from exceeding viewport */
+  height: 100vh;
   overflow: hidden;
 }
 
 .slides {
   display: flex;
-  width: 200%;
+  width: 200vw;
+  height: 100%;
   animation: slide 10s infinite;
 }
 
 .slide {
   width: 100vw;
+  height: 100vh;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -29,20 +30,17 @@ body {
 }
 
 .slide img {
-  width: 100vw;              /* Let the image be responsive */
-  height: auto;              /* Let height scale naturally */
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-}
-
-  object-fit: contain; 
 }
 
 @keyframes slide {
   0%   { transform: translateX(0); }
   45%  { transform: translateX(0); }
-  55%  { transform: translateX(-100%); }
-  100% { transform: translateX(-100%); }
+  55%  { transform: translateX(-100vw); }
+  100% { transform: translateX(-100vw); }
 }
 
 .overlay-box {
@@ -50,16 +48,15 @@ body {
     top: 50%;
     left: 50%;
     width: 100%;
-    height: 100px;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.419);  /* semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.419);
     padding: 30px 50px;
-    text-align: center;height: fit-content;
+    text-align: center;
+    height: fit-content;
     border-radius: 10px;
     color: white;
     z-index: 10;
     transition: opacity 0.5s ease;
-
 }
 
 .overlay-box p {
@@ -78,7 +75,6 @@ body {
     z-index: 10;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
-
 
 .white-line {
     border: none;
@@ -108,14 +104,13 @@ body {
 }
 
 .grid-item {
-    text-align: left; 
+    text-align: left;
     font-size: 10;
-    
 }
 
 .grid-item img {
     width: 100%;
-    height: 350px;            
+    height: 350px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
@@ -127,13 +122,9 @@ body {
     color: white;
 }
 
-
-
-
-/* --- NAVIGATION --- */
 .navbar {
     display: flex;
-    flex-wrap: nowrap; /* prevents line break */
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
@@ -144,8 +135,6 @@ body {
     z-index: 100;
 }
 
-
-/* Nav Menu */
 .nav-menu {
     list-style: none;
     display: flex;
@@ -178,26 +167,6 @@ body {
   cursor: pointer;
   color: black;
   padding: 0 20px;
-}
-
-/* Dropdown */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    min-width: 160px;
-    top: 100%;
-    left: 0;
-    border-radius: 0 0 4px 4px;
-    z-index: 200;
-}
-
-.dropdown-content a {
-    padding: 10px 16px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }
 
 .lightbox {
@@ -244,7 +213,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
   .hero-title {
     font-size: 2rem;
     top: 30%;
@@ -255,10 +223,9 @@ body {
     width: 90%;
   }
 
-.overlay-box p {
-  font-size: 1rem;
-}
-
+  .overlay-box p {
+    font-size: 1rem;
+  }
 
   .description {
     font-size: 1rem;
@@ -266,13 +233,13 @@ body {
   }
 
   .image-grid {
-    grid-template-columns: repeat(1, 1fr); /* Stack all images */
+    grid-template-columns: repeat(1, 1fr);
     padding: 30px 20px;
     gap: 20px;
   }
 
   .grid-item img {
-    height: auto; /* Adjust height dynamically */
+    height: auto;
   }
 
   .menu-toggle {
@@ -298,101 +265,101 @@ body {
 }
 
 .contact-container {
-      max-width: 800px;
-      margin: 120px auto 40px auto;
-      padding: 20px;
-      background-color: #f8f8f8;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+  max-width: 800px;
+  margin: 120px auto 40px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
-    .contact-container h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 2rem;
-      color: #333;
-    }
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
 
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-    }
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
 
-    .contact-form label {
-      margin-bottom: 6px;
-      font-weight: bold;
-      color: #444;
-    }
+.contact-form label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #444;
+}
 
-    .contact-form input,
-    .contact-form textarea {
-      margin-bottom: 20px;
-      padding: 10px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
-    .contact-form textarea {
-      resize: vertical;
-      height: 150px;
-    }
+.contact-form textarea {
+  resize: vertical;
+  height: 150px;
+}
 
-    .contact-form button {
-      padding: 12px;
-      background-color: black;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
+.contact-form button {
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-    .contact-form button:hover {
-      background-color: #444;
-    }
+.contact-form button:hover {
+  background-color: #444;
+}
 
-    @media (max-width: 768px) {
-      .contact-container {
-        margin-top: 140px;
-        padding: 15px;
-      }
-    }
+@media (max-width: 768px) {
+  .contact-container {
+    margin-top: 140px;
+    padding: 15px;
+  }
+}
 
-   .about-container {
-      max-width: 900px;
-      margin: 120px auto 60px auto;
-      padding: 20px;
-      background-color: #f8f8f8;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
+.about-container {
+  max-width: 900px;
+  margin: 120px auto 60px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-    .about-container h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #222;
-    }
+.about-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
 
-    .about-section {
-      margin-bottom: 40px;
-    }
+.about-section {
+  margin-bottom: 40px;
+}
 
-    .about-section p {
-      line-height: 1.7;
-      color: #444;
-      font-size: 1.1rem;
-    }
+.about-section p {
+  line-height: 1.7;
+  color: #444;
+  font-size: 1.1rem;
+}
 
-    @media (max-width: 768px) {
-      .about-container {
-        margin-top: 140px;
-        padding: 15px;
-      }
+@media (max-width: 768px) {
+  .about-container {
+    margin-top: 140px;
+    padding: 15px;
+  }
 
-      .about-container h2 {
-        font-size: 1.5rem;
-      }
-    }
+  .about-container h2 {
+    font-size: 1.5rem;
+  }
+}
