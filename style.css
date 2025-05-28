@@ -235,6 +235,11 @@ body {
     width: 90%;
   }
 
+  .description {
+    font-size: 1rem;
+    padding: 0 15px 30px 15px;
+  }
+
   .image-grid {
     grid-template-columns: repeat(1, 1fr); /* Stack all images */
     padding: 30px 20px;
@@ -271,4 +276,5 @@ body {
     padding: 20px 15px;
   }
 }
+
 
